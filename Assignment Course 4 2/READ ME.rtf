@@ -1,0 +1,27 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 The RRT function is very modular, so might look a little confusing, so I\'92ve attached an explanation of my implementation \
+STEPS: \
+1. Initialising, includes a counter and limit so it carries out max. 100 iterations\
+For counter< Limit\
+2. Calls on the function \'91sample\'92 to pick Xsamp and Ysamp\
+3. Calls on \'91shortest distance\'92 to pick the Nearest Node and its corresponding values\
+4. Simple straight line planner finds New Node in direction of the Sample Node\
+5. Collision checker checks for collision in the line segment connecting Nearest and New. If collision is true, go to 9\
+If collision is false\
+6. It appends New Node to the tree\
+7. Adds an edge between New and Nearest\
+If Xnew and Ynew in the goal region\
+8. Exits loop and returns success, Go to 11\
+Else\
+9. Counter increased by 1\
+10. Go to step 2\
+11. Returns values of nodes, edges etc as csv files\
+12. Uses astar to calculate path Astar calls on another group of functions attached in its folder\
+13. End\
+}
