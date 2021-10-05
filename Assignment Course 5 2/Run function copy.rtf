@@ -1,0 +1,110 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red60\green118\blue61;\red160\green32\blue240;}
+{\*\expandedcolortbl;;\csgenericrgb\c23529\c46275\c23922;\csgenericrgb\c62745\c12549\c94118;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs20 \cf0 clc \cf2 %clear screen
+\fs24 \cf0 \
+
+\fs20 fprintf(\cf3 'Example 1: Collapsing Assembly'\cf0 );
+\fs24 \
+
+\fs20 bodyList1 =  [1, 2, 25, 35;
+\fs24 \
+
+\fs20              2, 5, 66, 42];
+\fs24 \
+
+\fs20 contactList1 =  [1, 0,  0,  0, pi/2, 0.1;
+\fs24 \
+
+\fs20                  1, 2, 60, 60,   pi, 0.5;
+\fs24 \
+
+\fs20                  2, 0, 72,  0, pi/2, 0.5;
+\fs24 \
+
+\fs20                  2, 0, 60,  0, pi/2, 0.5];
+\fs24 \
+
+\fs20  isstable1 = CheckStability(bodyList1,contactList1);
+\fs24 \
+
+\fs20  disp(isstable1);
+\fs24 \
+
+\fs20  
+\fs24 \
+
+\fs20  fprintf(\cf3 'Example 2: Stable assembly'\cf0 );
+\fs24 \
+
+\fs20  bodyList2 = [1, 2,  25, 35;
+\fs24 \
+
+\fs20              2, 10, 66, 42];
+\fs24 \
+
+\fs20 contactList2 =  [1, 0,  0,  0, pi/2,  0.5;
+\fs24 \
+
+\fs20                  1, 2, 60, 60,   pi,  0.5;
+\fs24 \
+
+\fs20                  2, 0, 72,  0, pi/2,  0.5;
+\fs24 \
+
+\fs20                  2, 0, 60,  0, pi/2,  0.5];
+\fs24 \
+
+\fs20  isstable2 = CheckStability(bodyList2,contactList2);
+\fs24 \
+
+\fs20  disp(isstable2);
+\fs24 \
+
+\fs20  
+\fs24 \
+
+\fs20  fprintf(\cf3 'Example 3: Fig 12.27 - unstable(see results directory)'\cf0 )
+\fs24 \
+
+\fs20  bodyList3 = [1, 5, 110, 70; 2, 5, 260, 130; 3, 5, 410, 70];
+\fs24 \
+
+\fs20  mu3 = 0.3;
+\fs24 \
+
+\fs20  contactList3 = [1,1, 1, 1, 3, 3, 3, 3; 0, 0, 2, 2, 2, 2, 0, 0; 0, 80, 160, 180, 360, 340, 440, 520; 0, 0, 160, 100, 160, 100, 0, 0; pi/2, pi/2, -2.81993, -2.81993, -0.32166, -0.32166, pi/2, pi/2; mu3, mu3, mu3, mu3, mu3, mu3, mu3, mu3].';
+\fs24 \
+
+\fs20  isstable3 = CheckStability(bodyList3, contactList3);
+\fs24 \
+
+\fs20  disp(isstable3);
+\fs24 \
+
+\fs20  
+\fs24 \
+
+\fs20   fprintf(\cf3 'Example 4: Fig 12.27 - stable (see results directory)'\cf0 )
+\fs24 \
+
+\fs20   bodyList4 = [1, 5, 110, 70; 2, 5, 260, 130; 3, 5, 410, 70];
+\fs24 \
+
+\fs20   mu4 = 0.5;
+\fs24 \
+
+\fs20   contactList4 = [1,1, 1, 1, 3, 3, 3, 3; 0, 0, 2, 2, 2, 2, 0, 0; 0, 80, 160, 180, 360, 340, 440, 520; 0, 0, 160, 100, 160, 100, 0, 0; pi/2, pi/2, -2.81993, -2.81993, -0.32166, -0.32166, pi/2, pi/2; mu4, mu4, mu4, mu4, mu4, mu4, mu4, mu4].';
+\fs24 \
+
+\fs20   isstable4 = CheckStability(bodyList4, contactList4);
+\fs24 \
+
+\fs20   disp(isstable4);
+\fs24 \
+}
